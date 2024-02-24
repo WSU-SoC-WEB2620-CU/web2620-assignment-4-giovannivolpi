@@ -1,1 +1,85 @@
-// Your styles go here
+html{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background-color: lightgray;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+nav > ul > li{
+    background: grey;
+    margin-left: 1rem;
+    list-style-type: none;
+}
+
+.Jumbotron {
+    background: darkgray;
+    padding: 1rem;
+}
+
+button{
+    background-color: blue;
+    padding: .5rem;
+    color: white;
+    border: none;
+    font-size: 1rem;
+}
+
+/*grid styling*/
+
+.Container1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: aliceblue;
+}
+
+h2{
+    grid-area: 1 / 1 / span 1 / span 4;
+    text-align: center;
+}
+
+.card1{
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.card2{
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.card3{
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.card4{
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.Container2{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    background-color: lightcoral;
+}
+
+h2{
+    grid-area: 1 / 1 / span 1 / span 6;
+    text-align: center;
+}
+
+.card5{
+    grid-area: 2 / 5 / span 1 / span 1;
+}
+
+.card6{
+    grid-area: 2 / 6 / span 1 / span 1;
+}
+
