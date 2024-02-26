@@ -1,3 +1,10 @@
+/*animations*/
+@keyframes buttonAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
 html{
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -9,20 +16,33 @@ html{
     box-sizing: inherit;
 }
 
-nav > ul > li > a{
+header{
+    background-color: lightyellow;
+    padding: 10px;
+}
+
+ ul > li{
     text-decoration: none;
     color: black;
+    list-style-type: none;
+}
+
+ul > li > a{
+    text-decoration: none;
+}
+
+ul > li > a:hover{
+    background-color: lightcoral;
 }
 
 nav > ul > li{
-    background: grey;
     margin-left: 1rem;
     list-style-type: none;
 }
 
 .Jumbotron {
     background: darkgray;
-    padding: 1rem;
+    padding: 100px;
 }
 
 button{
@@ -31,15 +51,60 @@ button{
     color: white;
     border: none;
     font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+img{
+    width: 90%;
+    align-items: center;
+}
+
+.controller{
+    width: 90%;
+    align-items: center;
+}
+
+.game{
+    width: 20%;
+    align-items: center;
+}
+
+.vertical-line{
+    padding: 1px;
+    background-color: grey;
 }
 
 /*grid styling*/
+
+.Jumbotron{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+}
+
+.Learn{
+    grid-area: 1 / 2;
+    list-style-type: none;
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+.Learn:hover{
+    animation: buttonAnimation 1s ease-in-out 3;
+}
 
 .Container1{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    background-color: aliceblue;
+    padding: 80px;
 }
 
 h2{
@@ -67,12 +132,12 @@ h2{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
-    background-color: lightcoral;
+    padding: 100px;
 }
 
 h2{
     grid-area: 1 / 1 / span 1 / span 6;
-    text-align: center;
+    text-align: center; 
 }
 
 .card5{
@@ -87,7 +152,7 @@ h2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    background-color: darkcyan;
+    padding: 50px;
 }
 
 .bottom{
@@ -96,8 +161,34 @@ h2{
     gap: 10px;
     background-color: grey;
     padding: 15px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .text{
     grid-area: 2 / 1 / span 1 / span 1;
 }
+
+nav > ul{
+    display: flex;
+}
+
+nav > ul > li:nth-last-child(5) {
+    margin-right: auto;
+}
+
+#card{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#cards{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#product{
+    display: flex;
+    flex-flow: column;
+}
+
